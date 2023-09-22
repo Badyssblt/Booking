@@ -1,0 +1,19 @@
+{
+    "name": "badys/booking",
+    "type": "stripe-php",
+    "require-dev": {
+        "stripe/stripe-php": "^12.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Badys\\Booking\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mirooyo",
+            "email": "badtruc@gmail.com"
+        }
+    ],
+    "require": {}
+}

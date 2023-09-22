@@ -1,0 +1,49 @@
+menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.menu__log {
+    margin-right: 20px;
+}
+
+.items {
+    font-size: 1em;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.signin {
+    background: none;
+    padding: 10px;
+    border: 1px solid black;
+    transition: all .2s ease-in-out;
+}
+
+.signin:hover {
+    background: black;
+    color: white;
+}
+
+.signup {
+    background: black;
+    color: white;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.signup:hover {
+    background: none;
+    color: black;
+    border: 1px solid black;
+}
