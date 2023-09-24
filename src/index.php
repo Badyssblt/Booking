@@ -1,5 +1,6 @@
 <?php
 require(__DIR__ . './class/Db.php');
+$db = new Database("localhost", "root", "", "bookingfe");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,25 +17,39 @@ require(__DIR__ . './class/Db.php');
     <main>
         <div class="hero">
             <div class="hero__title">
-                <h1 class="hero__title__h1">Louer un séjour <br/>dans l'endroit de vos rêves</h1>
+                <h1 class="hero__title__h1">Louer un séjour <br/>dans l'endroit de vos </br>rêves</h1>
                 <div class="hero__title__info">
                     <span class="hero__title__span">Explorer des pays, régions <br/> aux prix les plus justes.</span>
                     <a href="#" class="hero__title__a">Découvrir</a>
                 </div>
-                
             </div>
             <div class="hero__banner">
-                <div class="hero__background">
-
-                </div>
                 <div class="hero__img__container">
                     <img src="./public/images/heroBanner.png" alt="Image">
+                    <div class="hero__background"></div>
                 </div>
             </div>
         </div>
+        <h2 class="destinations__title">Nos recommendations</h2>
         <div class="destinations__container">
-            
+            <?php
+                $stmt = $db->query("SELECT * FROM reservations LIMIT 4");
+                if($stmt){
+                    foreach($stmt as $item){ ?>
+                        <div class="destinations__items">
+                            <div class="destinations__img__container">
+                                <img src="<?= $item["image"] ?>" alt="">
+                            </div>
+                            <p class="items__title"><?= $item['nom'];  ?></p>
+                            <p class="items__price"><?= $item["prix"] . " € / nuit"; ?></p>
+                            <a class="items__link" href="./pages/reservations.php?id=<?= $item["ID"] ?>">Réserver</a>
+                        </div>
+                        <?php
+                    }
+                }
+            ?>
         </div>
     </main>
+    <script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -28,7 +28,13 @@
                             <input type="password" name="password" id="password">
                         </div>
                     </div>
-                    <input type="submit" value="Se connecter" class="log__submit">
+                    <?php
+                        if(!isset($_SESSION["ID"])){ ?>
+                            <input type="submit" value="Se connecter" class="log__submit">
+                            <?php
+                        }
+                    ?>
+                    
                     
                 </form>
             </div>
@@ -36,6 +42,7 @@
     </main>
 </body>
 </html>
+<script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
@@ -50,8 +57,14 @@
                     email: email,
                     password: password
                 },
+                dataType: "json",
                 success: function (response) {
-                    console.log(response);
+                    if(response.action === "connect"){
+                        $("#form").append("<div class='login__message'><div class='circle'></div><p>Vous vous êtes connecté, vous allez êtes redirigés</p></div>");
+                        setTimeout(function() {
+                        window.location.href = "/"; 
+                    }, 2800);
+                    }
                 },
                 error: function(){
                     console.log("erreur");

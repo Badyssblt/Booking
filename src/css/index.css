@@ -1,6 +1,7 @@
 .hero {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     height: calc(100vh - 80px);
     position: relative;
     
@@ -8,28 +9,29 @@
 
 .hero__banner {
     position: relative;
-    margin-left: 40%;
+    margin-left: 20%;
     margin-top: 50px;
- 
+    width: 45%;
 }
 
 .hero__img__container {
-    width: 700px;
-    height: 400px;
+    width: 100%;
+    height: fit-content;
+    position: relative;
 }
 
 .hero__img__container img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .hero__background {
     position: absolute;
     z-index: -2;
-    bottom: 30%;
+    bottom: -10%;
     right: -7%;
-    width: 600px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     background: #131112;
 }
 
@@ -49,12 +51,12 @@
 .hero__title__h1{
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 3.25vw;
 }
 
 .hero__title__span {
     font-family: 'Poppins';
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 .hero__title__a {
@@ -66,11 +68,81 @@
     border: 1px solid black;
     border-radius: 10px;
     font-family: 'Poppins';
-    font-size: 1.5vw;
+    font-size: 1vw;
     transition: all .2s ease-in-out;
 }
 
 .hero__title__a:hover {
     background: black;
     color: white;
+}
+
+/* ITEMS CSS */
+
+.destinations__container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 40px;
+}
+
+.destinations__title {
+    font-family: 'Poppins';
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.destinations__items {
+    background: #131112;
+    padding: 15px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto;
+    width: 330px;
+}
+
+.destinations__img__container {
+    width: 300px;
+}
+
+.destinations__img__container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.destinations__items p {
+    font-family: 'Poppins';
+    width: 100%;
+}
+
+.items__title {
+    color:  white;
+}
+
+.items__price {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.items__link {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    justify-self: center;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Poppins';
+    transition: all .2s ease-in-out;
+}
+
+.items__link:hover {
+    background: white;
+    color: black;
 }

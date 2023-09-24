@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <menu>
     <div class="menu__title">
         <li><a href="/" class="items" title="Accueil du site">BookingFE</a></li>
@@ -7,8 +10,18 @@
         <li><a href="" class="items" title="Découvrir des réservations">Découvrir</a></li>
     </div>
     <div class="menu__log menu">
-        <li class="menu__li"><a href="/pages/login.php" class="items signin" title="Se connecter">Se connecter</a></li>
-        <li class="menu__li"><a href="/pages/register.php" class="items signup" title="S'inscrire">S'inscrire</a></li>
+        <?php
+            if(isset($_SESSION['ID'])){?>
+                <a href="../pages/account.php"><i class="fas fa-user" style="font-size: 1.25em"></i></a>
+                <a href="../process/logout.php"><i class="fa fa-sign-out" style="font-size: 1.25em"></i></a>
+            <?php
+            }else { ?>
+                <li class="menu__li"><a href="/pages/login.php" class="items signin" title="Se connecter">Se connecter</a></li>
+                <li class="menu__li"><a href="/pages/register.php" class="items signup" title="S'inscrire">S'inscrire</a></li>
+            <?php
+            }
+        ?>
+
     </div>
     
 </menu>

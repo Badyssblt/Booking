@@ -91,7 +91,7 @@ label {
 }
 
 .log__submit {
-    border: none;
+    border: 1px solid transparent;
     color: white;
     font-family: 'Poppins';
     padding: 5px;
@@ -101,12 +101,12 @@ label {
     background-color: #131112;
     cursor: pointer;
     margin-left: 10%;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
 }
 
 .log__submit:hover {
     background: none;
-    border: 1px solid;
+    border: 1px solid black;
     color: black;
 }
 
@@ -182,3 +182,11 @@ label {
     }
 }
 
+.login__mesage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: green;
+    font-family: 'Poppins';
+    font-size: 1em;
+}

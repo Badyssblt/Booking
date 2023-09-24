@@ -32,7 +32,13 @@ class User {
             session_start();
             $_SESSION["email"] = $email;
             $_SESSION["ID"] = $user[0]['ID'];
-            header("Location: /");
+            $response = [
+                "response_code" => 200,
+                "message" => "connecté",
+                "action" => "connect",
+                "session" => $_SESSION
+            ];
+            return $response;
         }else {
             $response = [
                 "response_code" => "200",

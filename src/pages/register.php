@@ -50,6 +50,7 @@
     </main>
 </body>
 </html>
+<script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
@@ -60,7 +61,8 @@
             const email = $("#email").val();
             const password = $("#password").val();
             const confirmPass = $("#confirm").val();
-            $.ajax({
+            if(password == confirmPass){
+                $.ajax({
                 type: "POST",
                 url: "../process/register.php",
                 data: {
@@ -80,6 +82,10 @@
                     console.log("erreur");
                 }
             });
+            }else {
+                $("#form").append("<div><p>Veuillez confirmer votre mot de passe</p></div>")
+            }
+           
         })
     })
 </script>

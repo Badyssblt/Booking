@@ -6,19 +6,7 @@ if($_POST){
     $db = new Database("localhost", "root", "", "bookingfe");
     $userInstance = new User($db);
     $connect = $userInstance->Login($email, $password);
-    if($connect){
-        $response = [
-            "message" => "connecté"
-        ];
-    }else {
-        $response = [
-            "message" => "non connecté"
-        ];
-    }
-    $response = [
-        "message" => "test"
-    ];
-    echo json_encode($response);
+    echo json_encode($connect);
     
 }
 

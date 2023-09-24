@@ -1,0 +1,98 @@
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.sidebar {
+    min-height: 200px;
+    padding-left: 30px;
+    height: fit-content;
+    width: 380px;
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bold;
+    background: #131112;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.informations__title  {
+    font-family: 'Poppins';
+}
+
+.informations__subtitle {
+    font-family: 'Poppins';
+    color: rgba(0, 0, 0, .7);
+    font-size: .9em;
+    margin-top: 1vh;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid grey;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+#profile__list {
+    color: grey;
+    font-weight: 400;
+    font-size: .9em;
+}
+
+#reservation__list {
+    padding-left: 20px;
+    font-size: .9em;
+    font-weight: 400;
+    color: grey;
+}
+
+.reservation__item {
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+form  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+form input {
+    font-family: 'Poppins';
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 40px;
+    align-self: center;
+}
+
+form label {
+    font-weight: bold;
+    font-family: 'Poppins';
+    align-self: center;
+}
+
+.input {
+    height: 40px;
+    display: grid;
+    align-self: center;
+    grid-template-columns: auto auto;
+}
+
+.input > i {
+    align-self: center;
+    color: #131112;
+}
