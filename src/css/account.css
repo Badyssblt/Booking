@@ -96,3 +96,37 @@ form label {
     align-self: center;
     color: #131112;
 }
+
+/* EN COURS */
+
+.book_reservations {
+    display: grid;
+    grid-auto-rows: 200px;
+    gap: 20px;
+    height: fit-content;
+}
+
+.book_reservations .item img{
+    width: 200px;
+    height: 200px;
+}
+
+.book_reservations .item {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    background: #131112;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.item__info {
+    padding-left: 20px;
+}
+
+
+
+#item__title {
+    font-weight: bold;
+}
