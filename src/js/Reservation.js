@@ -4,12 +4,11 @@ function calculerDifference() {
 
   var date1 = new Date(date1String);
   var date2 = new Date(date2String);
-
   var differenceEnMilliseconds = date2 - date1;
   var differenceEnJours = differenceEnMilliseconds / (1000 * 60 * 60 * 24);
   differenceEnJours = Math.round(differenceEnJours);
 
-  $("#number").text(differenceEnJours);
+  $("#number").prepend(differenceEnJours);
 }
 
 function calculTotal() {
@@ -39,15 +38,6 @@ $(window).scroll(function () {
   }
 });
 
-$(document).ready(() => {
-  const today = new Date();
-  const debut = today.toISOString().slice(0, 10);
-  $("#date_debut").val(debut);
-  const end = new Date();
-  end.setDate(end.getDate() + 2);
-  const endFormat = end.toISOString().slice(0, 10);
-  $("#date_fin").val(endFormat);
-  calculerDifference();
-});
+$(document).ready(() => {});
 
-$("#date_debut, #date_fin").on("change", calculerDifference, calculTotal);
+$("#date_debut, #date_fin").on("change", calculerDifference);
