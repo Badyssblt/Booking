@@ -81,8 +81,10 @@
 
 .destinations__container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
+    width: fit-content;
     padding: 40px;
+    gap: 10px;
 }
 
 .destinations__title {
@@ -90,6 +92,7 @@
     color: black;
     font-weight: bold;
     margin-left: 10px;
+    font-size: 1.3em;
 }
 
 .destinations__items {
@@ -104,6 +107,7 @@
 
 .destinations__img__container {
     width: 300px;
+    height: 230px;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -155,4 +159,45 @@
 .items__link:hover {
     background: white;
     color: black;
+}
+
+footer{
+    width: 100%;
+    height: 160px;
+    font-family: Poppins;
+    border-top: 1px solid #131112;
+}
+
+.columns {
+    padding-bottom: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.col-title {
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.col-sub {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.col-sub:hover {
+    transform: scale(1.1);
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, .8);
+    gap: 10px;
+}
+
+.icon {
+    padding-right: 10px;
+    font-size: 1.2em;
 }

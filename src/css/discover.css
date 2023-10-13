@@ -1,0 +1,40 @@
+#filter__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#search {
+    width: 200px;
+    background: #131112;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: Poppins;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+#chamber {
+    background: #131112;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: Poppins;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+select {
+    background: #131112;
+    padding: 5px;
+    color: white;
+    font-family: Poppins;
+}
+
+option {
+    font-family: Poppins;
+    color: white;
+}

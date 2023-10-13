@@ -64,6 +64,9 @@
                         setTimeout(function() {
                         window.location.href = "/"; 
                     }, 2800);
+                    }else{
+                        $("#form").append("<div style='font-family: Poppins;'><p>Mauvais identifiants !</p></div>");
+
                     }
                 },
                 error: function(){

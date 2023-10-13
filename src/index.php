@@ -30,26 +30,52 @@ $db = new Database("localhost", "root", "", "bookingfe");
                 </div>
             </div>
         </div>
-        <h2 class="destinations__title">Nos recommendations</h2>
-        <div class="destinations__container">
-            <?php
-                $stmt = $db->query("SELECT * FROM reservations LIMIT 4");
-                if($stmt){
-                    foreach($stmt as $item){ ?>
-                        <div class="destinations__items">
-                            <div class="destinations__img__container">
-                                <img src="<?= $item["image"] ?>" alt="">
+        <div class="recommands">
+            <p class="destinations__title">Nos recommendations</p>
+            <div class="destinations__container">
+                <?php
+                    $stmt = $db->query("SELECT * FROM reservations LIMIT 4");
+                    if($stmt){
+                        foreach($stmt as $item){ ?>
+                            <div class="destinations__items">
+                                <div class="destinations__img__container">
+                                    <img src="<?= $item["image"] ?>" alt="">
+                                </div>
+                                <p class="items__title"><?= $item['nom'];  ?></p>
+                                <p class="items__price"><?= $item["prix"] . " € / nuit"; ?></p>
+                                <a class="items__link" href="./pages/reservations.php?id=<?= $item["ID"] ?>">Réserver</a>
                             </div>
-                            <p class="items__title"><?= $item['nom'];  ?></p>
-                            <p class="items__price"><?= $item["prix"] . " € / nuit"; ?></p>
-                            <a class="items__link" href="./pages/reservations.php?id=<?= $item["ID"] ?>">Réserver</a>
-                        </div>
-                        <?php
+                            <?php
+                        }
                     }
-                }
-            ?>
+                ?>
+            </div>
         </div>
+        <div class="house">
+            <p class="destinations__title paragraph">Maisons</p>
+            <div class="destinations__container">
+                <?php
+                $sql = "SELECT * FROM reservations INNER JOIN category ON reservations.ID = category.ID WHERE category.name = 'Maison' LIMIT 4";
+                    $stmt = $db->query($sql);
+                    if($stmt){
+                        foreach($stmt as $item){ ?>
+                            <div class="destinations__items">
+                                <div class="destinations__img__container">
+                                    <img src="<?= $item["image"] ?>" alt="">
+                                </div>
+                                <p class="items__title"><?= $item['nom'];  ?></p>
+                                <p class="items__price"><?= $item["prix"] . " € / nuit"; ?></p>
+                                <a class="items__link" href="./pages/reservations.php?id=<?= $item["ID"] ?>">Réserver</a>
+                            </div>
+                            <?php
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+        
     </main>
+    <?php require("./components/footer.php"); ?>
     <script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>
 </body>
 </html>

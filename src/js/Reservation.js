@@ -1,21 +1,28 @@
 function calculerDifference() {
-  var date1String = $("#date_debut").val();
-  var date2String = $("#date_fin").val();
-
-  var date1 = new Date(date1String);
-  var date2 = new Date(date2String);
-  var differenceEnMilliseconds = date2 - date1;
-  var differenceEnJours = differenceEnMilliseconds / (1000 * 60 * 60 * 24);
-  differenceEnJours = Math.round(differenceEnJours);
-
-  $("#number").prepend(differenceEnJours);
+  let date1String = $("#date_debut").val();
+  let date2String = $("#date_fin").val();
+  let date1Parts = date1String.split("-");
+  let date2Parts = date2String.split("-");
+  let date_debut = new Date(date1Parts[2], date1Parts[1] - 1, date1Parts[0]);
+  let date_fin = new Date(date2Parts[2], date2Parts[1] - 1, date2Parts[0]);
+  let diff = date_fin - date_debut;
+  let diffDay = diff / (1000 * 60 * 60 * 24);
+  let night = diffDay > 1 ? " nuits" : " nuit";
+  $("#number").text(diffDay + night);
+  return diffDay;
 }
 
-function calculTotal() {
-  let price = $(".price").html();
-  let day = $("#number").html();
-  let total = price * day;
+function calculTotal(price) {
+  const days = calculerDifference();
+  let total = price * days;
+  Math.round(total, 2);
   $(".total").html(total + " €");
+  $("#price").val(total);
+}
+
+function createInput(price, title) {
+  $("#price").val(price);
+  $("#titles").val(title);
 }
 
 function estDivVisible() {
@@ -39,5 +46,3 @@ $(window).scroll(function () {
 });
 
 $(document).ready(() => {});
-
-$("#date_debut, #date_fin").on("change", calculerDifference);

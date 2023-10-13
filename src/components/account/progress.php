@@ -8,7 +8,7 @@ session_start();
 ?>
 <div class="book__content">
     <h1 class="informations__title">Mes réservations en cours</h1>
-    <div class="content">
+    <div class="content__progress">
         <p>Voici les réservations en cours</p>
         <div class="book_reservations">
             <?php
@@ -23,6 +23,7 @@ session_start();
                             <p><?= $item["prix"] ?> € / nuit</p>
                             <p><?= date("d/m/Y", $date_debut); ?></p>
                             <p><?= date("d/m/Y", $date_fin) ?></p>
+                            <a id="item__link" href="../../pages/reservations.php?id=<?= $item['reservationID'] ?>">Voir la réservation</a>
                         </div>
                     </div>
                 <?php

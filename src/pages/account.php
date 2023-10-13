@@ -70,6 +70,10 @@
         $("#done").click(function() {
             $('.content').load("../components/account/done.php");
         })
+        $("#message").click(function() {
+            $('.content').load("../components/account/message.php");
+        })
+
     })
 </script>
 

@@ -7,7 +7,7 @@ session_start();
     </div>
     <div class="menu__content menu">
         <li><a href="" class="items" title="A propos du site">A propos de nous</a></li>
-        <li><a href="" class="items" title="Découvrir des réservations">Découvrir</a></li>
+        <li><a href="/pages/discover.php" class="items" title="Découvrir des réservations">Découvrir</a></li>
     </div>
     <div class="menu__log menu">
         <?php

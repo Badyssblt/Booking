@@ -1,0 +1,134 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10vh;
+    gap: 20px;
+    width: 100%;
+    font-family: 'Poppins';
+}
+
+#recap {
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+h1 {
+    font-weight: bold;
+    width: 400px;
+    font-size: 1.1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    padding: 20px;
+    background: #131112;
+}
+
+input {
+    background: none;
+    font-family: 'Poppins';
+    color: white;
+    outline: none;
+    border-top: none;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+}
+
+button {
+    padding: 10px;
+    background: none;
+    color: white;
+    font-family: 'Poppins';
+    outline: none;
+    border: 1px solid white;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.input {
+    font-family: 'Poppins';
+    color: white;
+    padding: 10px;
+}
+
+.input::placeholder{
+    color: white;
+    font-family: 'Poppins';
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 ;
+    border-bottom: 1px solid black;
+}
+
+#payment__title {
+    font-family: Poppins;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+#totality {
+    font-weight: 600;
+}
+
+.payment__total {
+    border: 1px solid black;
+    padding: 10px;
+    position: relative;
+}
+
+.payment__total::after {
+    content: "";
+    position: absolute;
+    right: 5%;  
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#now {
+    font-size: 1em;
+}
+
+.dates__content {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-family: Poppins;
+    font-size: 1.2em;
+}
+
+#card-success {
+    width: 300px;
+    font-family: Poppins;
+    color: green;
+}
+
