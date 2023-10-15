@@ -26,13 +26,13 @@ class Reservation {
 
     public function getBookByFilter($name = null, $animal = null, $wifi = null, $chamber = null){
         $sql = "SELECT * FROM reservations WHERE nom LIKE '%$name%'";
-        if(isset($chamber)){
+        if(isset($chamber) && $chamber !== ""){
             $sql .= " AND chambre = '$chamber'";
         }
-        if(isset($animal)){
+        if(isset($animal) && $animal !== ""){
             $sql .= " AND animaux = '$animal'";
         }
-        if(isset($wifi)){
+        if(isset($wifi) && $wifi !== ""){
             $sql .= " AND wifi = '$wifi'";
         }
         $stmt = $this->database->query($sql);

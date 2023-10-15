@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <link rel="stylesheet" href="../css/reservation.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../js/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -32,6 +33,7 @@
         <?php
             $_SESSION['reservationID'] = $_GET['id'];        ?>
     </main>
+    <?php require("../components/footer.php") ?>
 </body>
 </html>
 <script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>

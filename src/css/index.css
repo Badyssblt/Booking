@@ -1,3 +1,8 @@
+main {
+    min-height: 100vh;
+}
+
+
 .hero {
     display: flex;
     flex-direction: row;
@@ -161,6 +166,7 @@
     color: black;
 }
 
+
 footer{
     width: 100%;
     height: 160px;
@@ -200,4 +206,31 @@ footer{
 .icon {
     padding-right: 10px;
     font-size: 1.2em;
+}
+
+@media screen and (max-width: 780px){
+    .hero {
+        height: 50vh;
+    }
+
+    .hero__title__h1 {
+        font-size: 1.2em;
+    }
+
+    .hero__title__span {
+        font-size: .8em;
+    }
+
+    .hero__title__a {
+        font-size: .6em;
+    }
+
+    .hero__banner {
+        width: 60%;
+    }
+
+    .destinations__container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
 }

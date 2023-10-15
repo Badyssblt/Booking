@@ -8,6 +8,7 @@ $db = new Database("localhost", "root", "", "bookingfe");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/reset.css">
     <title>Accueil</title>
@@ -20,7 +21,7 @@ $db = new Database("localhost", "root", "", "bookingfe");
                 <h1 class="hero__title__h1">Louer un séjour <br/>dans l'endroit de vos </br>rêves</h1>
                 <div class="hero__title__info">
                     <span class="hero__title__span">Explorer des pays, régions <br/> aux prix les plus justes.</span>
-                    <a href="#" class="hero__title__a">Découvrir</a>
+                    <a href="/pages/discover.php" class="hero__title__a">Découvrir</a>
                 </div>
             </div>
             <div class="hero__banner">

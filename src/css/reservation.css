@@ -351,5 +351,49 @@ input[type="text"]{
     width: fit-content;
 }
 
+@media screen and (max-width: 780px){
 
+    .form {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .content__info {
+        width: 100%;
+    }
+    .img__container {
+        width: 300px;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
+
+    .form__unfixed {
+        position: relative;
+    }
+
+    #form {
+        width: 350px;
+    }
+
+    .span {
+        font-size: 1em;
+    }
+
+    .form__description {
+        width: 90%;
+        padding: 0;
+    }
+
+    #description {
+        width: 100%;
+    }
+
+    #sleep {
+        font-size: 1em;
+    }
+
+}
 

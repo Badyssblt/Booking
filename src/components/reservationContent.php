@@ -136,7 +136,7 @@ session_start();
                     <p class="chamber"></p>
                     <p class="animal"></p>
                 </div>
-                <h2 style="font-family: 'Poppins'; color: white; padding-bottom: 5vh; margin: 30px">Réserver votre séjour maintenant.</h2>
+                <h2 style="font-family: 'Poppins'; color: white; padding-bottom: 5vh; margin: 30px" class="span">Réserver votre séjour maintenant.</h2>
                 <div class="form">
                     <div class="form__description">
                         <div class="description slide">

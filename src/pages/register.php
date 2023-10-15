@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/register.css">
     <title>S'inscrire</title>
 </head>
@@ -48,6 +49,7 @@
             </div>
         </div>
     </main>
+    <?php require("../components/footer.php") ?>
 </body>
 </html>
 <script src="https://kit.fontawesome.com/c1cb64b22b.js" crossorigin="anonymous"></script>

@@ -1,7 +1,30 @@
+main {
+    min-height: 100vh;
+    margin-bottom: 10vh;
+}
+
+.destinations__container {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+    justify-content: center;
+}
+
+.destinations__items {
+    min-width: 90%;
+    max-width: 100%;
+}
+
+.destinations__img__container {
+    width: 100%;
+}
+
+
 #filter__form {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
@@ -37,4 +60,44 @@ select {
 option {
     font-family: Poppins;
     color: white;
+}
+
+input[type="submit"]{
+    background: #131112;
+    font-family: Poppins;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: none;
+    color: #131112;
+    border: 1px solid #131112;
+}
+
+@media screen and (max-width: 780px){
+    #search, #chamber{
+        width: 100px;
+        height: 30px;
+    }
+
+    #search::placeholder, #chamber::placeholder{
+        font-size: .8em;
+    }
+
+
+
+    select {
+        width: 20px;
+    }
+    
+    input {
+        width: auto; /* ou peut-être une autre valeur selon tes besoins */
+        padding: 2px;
+    }
 }

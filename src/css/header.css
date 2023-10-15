@@ -47,3 +47,72 @@ menu {
     color: black;
     border: 1px solid black;
 }
+
+
+
+/* MENU BURGER */
+
+.menu__all {
+    display: none;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.menu__burger {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+#burger__close {
+    z-index: 90;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #131112;
+    color: white;
+}
+
+.burger__icon {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+
+    menu {
+        justify-content: flex-start;
+    }
+    .menu__content{
+        display: none;
+    }
+
+    .menu__log {
+        display: none;
+    }
+
+    .burger__icon{
+        display: block;
+    }
+}
